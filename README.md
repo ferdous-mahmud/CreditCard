@@ -2,8 +2,6 @@
 
 Basic functionality implement using Java for CSE-2101.
 
-           ****--  Documentation  --****
-
 # Requirement
 
     1.Store information about customer
