@@ -44,4 +44,10 @@ Basic functionality implement using Java for CSE-2101.
 
 # How to contrubute :
 
-     [I'm an inline-style link with title](https://github.com/firstcontributions/first-contributions "Open Source")
+            1. Fork the repository
+            2. Clone the repository
+            3. Create a branch
+            4. Make necessary changes and commit those changes
+            5. Push changes to GitHub
+            6. Submit your changes for review
+            7. Keeping your fork synced with this repository
