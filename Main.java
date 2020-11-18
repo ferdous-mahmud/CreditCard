@@ -73,8 +73,56 @@ class CreditCard{
         System.out.println("+-------------------+--------------------+----------------------+");
         System.out.println("|   "+customer+"       |   "+bank+"  |   "+account+"   |");
         System.out.println("+-------------------+--------------------+----------------------+");
-        System.out.println();
+        System.out.printf("\n\n\n");
+        System.out.println("1.Account Details");
+        System.out.println("2.Make Payment");
+        System.out.println("3.Charge\n");
+        System.out.print("Please input 1 , 2 or 3 : ");
 
-        charge(100.9);
+        int dis = input.nextInt();
+
+            switch(dis){
+                case 1:
+                    System.out.println();
+                    System.out.println("             Option 1 Selected");
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.println("|   Account Balance |    Account Limit   |");
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.printf("|      %.2f      |        %d        |\n",balance,limit);
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.println();
+                    break;
+                
+                case 2:
+                    System.out.println();
+                    System.out.println("             Option 2 Selected");
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.println("|   Account Balance |    Account Limit   |");
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.printf("|      %.2f      |        %d        |\n",balance,limit);
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.println();
+                    System.out.println();
+                    System.out.print("Enter Payment amount : ");
+                    double amount = input.nextDouble();
+                    makePayment(amount);
+                    System.out.println();
+                    //display info
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.println("|   Account Balance |    Account Limit   |");
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.printf("|      %.2f      |        %d        |\n",balance,limit);
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.println();
+                    break;
+                
+                case 3:
+                    System.out.println();
+                    System.out.println("             Option 3 Selected");
+                    break;
+                default:
+                    System.out.println("\n\n   Invalid Option...!! \n\n");
+                    break;
+            }
     }
 }

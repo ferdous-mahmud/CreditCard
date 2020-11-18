@@ -32,7 +32,7 @@ Basic functionality implement using Java for CSE-2101.
             + getAccount() : String
             + getLimit() : int
             + getBalance() : double
-            + change(price : double) : boolean
+            + charge(price : double) : boolean
             + makePayment(ammount : double)
 
 
