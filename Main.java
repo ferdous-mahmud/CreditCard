@@ -4,11 +4,11 @@ public class Main{
     public static void main(String[] args){
 
         //creating object 
-        CreditCard obj = new CreditCard("Mr. Rahim","Prime Bank Ltd.","5391037593875309",2500,3000);
-        CreditCard obj2 = new CreditCard("Mr. Karim","Brack Bank Ltd.","3485039933951954",3500);
-        CreditCard obj3 = new CreditCard("Mrs. Lipi","Prime Bank Ltd.","6391037593875309");
+        CreditCard user1 = new CreditCard("Mr. Rahim","Prime Bank Ltd.","5391037593875309",2500,3000);
+        CreditCard user2 = new CreditCard("Mr. Karim","Brack Bank Ltd.","3485039933951954",3500);
+        CreditCard user3 = new CreditCard("Mrs. Lipi","Prime Bank Ltd.","6391037593875309");
 
-        obj.show();
+        user1.show();
 
         
     }
@@ -105,17 +105,26 @@ class CreditCard{
                     System.out.println();
                     System.out.print("Enter Payment amount : ");
                     double amount = input.nextDouble();
-                    makePayment(amount);
-                    System.out.println();
-                    //display info
-                    System.out.println("+-------------------+--------------------+");
-                    System.out.println("|   Account Balance |    Account Limit   |");
-                    System.out.println("+-------------------+--------------------+");
-                    System.out.printf("|      %.2f      |        %d        |\n",balance,limit);
-                    System.out.println("+-------------------+--------------------+");
-                    System.out.println();
-                    break;
-                
+                    if(amount <= limit){
+                        makePayment(amount);
+                        System.out.println();
+                        //display info
+                        System.out.println("           Payment Successful..!");
+                        System.out.println("+-------------------+--------------------+");
+                        System.out.println("|   Current Balance |    Account Limit   |");
+                        System.out.println("+-------------------+--------------------+");
+                        System.out.printf("|      %.2f      |        %d        |\n",balance,limit);
+                        System.out.println("+-------------------+--------------------+");
+                        System.out.println();
+                        break;
+                    }
+                    else{
+                        System.out.println();
+                        System.out.println("       Sorry! Payment limit exit...!!");
+                        System.out.println();
+                        break;
+                    }
+                    
                 case 3:
                     System.out.println();
                     System.out.println("             Option 3 Selected");
