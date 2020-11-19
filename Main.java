@@ -53,10 +53,11 @@ class CreditCard{
     //update methods
     //charge method
     public boolean charge(double price){
-        if(price + balance > limit)
+        if(price > balance){
             return false;
-            balance += price;
-        return true;
+        }
+         balance -= price;
+         return true;   
     }
     //makePayment method
     public void makePayment(double amount){
@@ -128,7 +129,35 @@ class CreditCard{
                 case 3:
                     System.out.println();
                     System.out.println("             Option 3 Selected");
-                    break;
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.println("|   Account Balance |    Account Limit   |");
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.printf("|      %.2f      |        %d        |\n",balance,limit);
+                    System.out.println("+-------------------+--------------------+");
+                    System.out.println();
+                    System.out.println();
+                    System.out.print("Enter Charge amount : ");
+                    double amount2 = input.nextDouble();
+                    boolean bol = charge(amount2);
+                    if(bol == true){
+                        
+                        System.out.println();
+                        //display info
+                        System.out.println("     Charge Successful..!");
+                        System.out.println("    +-------------------+");
+                        System.out.println("    |   Current Balance |");
+                        System.out.println("    +-------------------+");
+                        System.out.printf("    |      %.2f      |\n",balance);
+                        System.out.println("    +-------------------+");
+                        System.out.println();
+                        break;
+                    }
+                    else{
+                        System.out.println();
+                        System.out.println("       Sorry! Please input valid vlaue...!!");
+                        System.out.println();
+                        break;
+                    }
                 default:
                     System.out.println("\n\n   Invalid Option...!! \n\n");
                     break;
