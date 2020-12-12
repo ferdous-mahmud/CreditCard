@@ -44,8 +44,8 @@ Basic functionality implement using Java for CSE-2101.
 
 # How to contrubute :
 
-            1. Fork the repository
-            2. Clone the repository
+            1. Fork this repository
+            2. Clone this repository
             3. Create a branch
             4. Make necessary changes and commit those changes
             5. Push changes to GitHub
